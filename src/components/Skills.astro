@@ -1,0 +1,73 @@
+---
+
+import {
+    Card,
+    CardContent,
+} from "@/components/ui/card"
+import SkillBadge from "./SkillBadge.astro";
+
+const skills = [
+    {
+        name: "JavaScript",
+        image: "/icons/javascript.png",
+    },
+    {
+        name: "TypeScript",
+        image: "/icons/typescript.png",
+    },
+    {
+        name: "React",
+        image: "/icons/react.png",
+    },
+    {
+        name: 'Angular',
+        image: '/icons/angular.png',
+    },
+    {
+        name: 'Astro',
+        image: '/icons/astro.png',
+    },
+    {
+        name: "Node.js",
+        image: "/icons/nodejs.png",
+    },
+    {
+        name: "GraphQL",
+        image: "/icons/graphql.png",
+    },
+    {
+        name: "MongoDB",
+        image: "/icons/mongodb.png",
+    },
+    {
+        name: "MySql",
+        image: "/icons/mysql.png",
+    },
+    {
+        name: "AWS",
+        image: "/icons/aws.png",
+    },
+    {
+        name: "Git",
+        image: "/icons/git.png",
+    },
+]
+
+---
+<div id="skills" class="flex flex-col pt-7 pb-7 lg:pb-44 lg:pt-22 items-center ">
+    <div>
+        <h1 class="text-2xl lg:text-4xl w-full mb-5 font-bold">Skills</h1>
+    </div>
+    <div class="w-full max-w-screen-md mt-5">
+        <Card>
+            <CardContent>
+                <div class="flex flex-wrap gap-4 mt-4">
+                    {skills.map((skill, index) => (
+                            <SkillBadge key={index} skill={skill.name} image={skill.image} />
+                    ))}
+                </div>
+            </CardContent>
+        </Card>
+    </div>
+</div>
+
