@@ -63,7 +63,7 @@ const skills = [
             <CardContent>
                 <div class="flex flex-wrap gap-4 mt-4">
                     {skills.map((skill, index) => (
-                            <SkillBadge key={index} skill={skill.name} image={skill.image} />
+                            <SkillBadge skill={skill.name} image={skill.image} />
                     ))}
                 </div>
             </CardContent>
