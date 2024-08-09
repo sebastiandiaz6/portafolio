@@ -1,14 +1,11 @@
 import {
     NavigationMenu as BaseNavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuIndicator,
     NavigationMenuItem,
     NavigationMenuLink,
     NavigationMenuList,
-    NavigationMenuTrigger,
-    NavigationMenuViewport,
     navigationMenuTriggerStyle
 } from "@/components/ui/navigation-menu"
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 interface Props {
     data: {
@@ -21,6 +18,16 @@ export function NavigationMenu({data}: Props) {
     return (
         <BaseNavigationMenu>
             <NavigationMenuList>
+                <a href='/'>
+                    <NavigationMenuItem>
+                        <NavigationMenuLink className={navigationMenuTriggerStyle()}>
+                            <Avatar>
+                                <AvatarImage src='/logo/Icon.png' className='p-1'/>
+                                <AvatarFallback>CN</AvatarFallback>
+                            </Avatar>
+                        </NavigationMenuLink>
+                    </NavigationMenuItem>
+                </a>
                 {data.map((item, index) => {
                     return (
                         <a href={item.href}>
@@ -30,9 +37,9 @@ export function NavigationMenu({data}: Props) {
                                 </NavigationMenuLink>
                             </NavigationMenuItem>
                         </a>
-                );
+                    );
                 })}
             </NavigationMenuList>
         </BaseNavigationMenu>
-    )
+)
 }

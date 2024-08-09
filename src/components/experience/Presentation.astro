@@ -1,8 +1,11 @@
 ---
 
+import { Image } from 'astro:assets';
+
 ---
 
-<div class="flex justify-center">
+<div class="flex flex-col justify-center items-center mt-10 lg:mt-0 pb-10 lg:pb-0">
+    <Image src="/logo/Experience.png" alt="Experience." width="200" height="200"/>
     <div class="max-w-sm lg:max-w-lg">
         <p class="leading-7 mt-3 lg:mt-0 text-sm">
             I have been involved in the world of software development since 2020
@@ -12,7 +15,6 @@
             and my devotion to development has only grown stronger.
             In 2022, I received my degree as a <b>Computer Engineer</b>.
         </p>
-        <br>
         <p class="leading-7 [&:not(:first-child)]:mt-6 text-sm">
             Currently, I am working at <b>Dily</b> as a <b>FullStack Developer</b>,
             participating in the entire software development cycle,
@@ -20,11 +22,6 @@
             At this moment, what excites me the most is learning more about
             <b>Clean Architectures</b> and best programming practices,
             as they are key to achieving more scalable and maintainable development.
-        </p>
-        <br>
-        <p class="leading-7 [&:not(:first-child)]:mt-6 text-sm">
-            My hobbies include spending time with my family and pets (I currently have a dog and a cat),
-            as well as reading, watching football, or walking around the city.
         </p>
     </div>
 </div>

@@ -3,8 +3,9 @@
 import {
     Card,
     CardContent,
-} from "@/components/ui/card"
+} from "../ui/card"
 import SkillBadge from "./SkillBadge.astro";
+import SoftwareDesign from "./SoftwareDesign.astro";
 
 const skills = [
     {
@@ -54,20 +55,21 @@ const skills = [
 ]
 
 ---
-<div id="skills" class="flex flex-col pt-7 pb-7 lg:pb-44 lg:pt-22 items-center ">
-    <div>
-        <h1 class="text-2xl lg:text-4xl w-full mb-5 font-bold">Skills</h1>
+<div id="skills" class="grid justify-center items-center w-full h-full gap-5">
+    <div class="w-full flex flex-col justify-center items-center gap-5 mt-5 lg:mt-0">
+        <h1 class="text-3xl font-bold mb-3">Skills</h1>
+        <div class="max-w-80 lg:max-w-2xl">
+            <Card>
+                <CardContent>
+                    <div class="flex flex-wrap gap-4 mt-4">
+                        {skills.map((skill, index) => (
+                                <SkillBadge skill={skill.name} image={skill.image} />
+                        ))}
+                    </div>
+                </CardContent>
+            </Card>
+        </div>
     </div>
-    <div class="w-full max-w-screen-md mt-5">
-        <Card>
-            <CardContent>
-                <div class="flex flex-wrap gap-4 mt-4">
-                    {skills.map((skill, index) => (
-                            <SkillBadge skill={skill.name} image={skill.image} />
-                    ))}
-                </div>
-            </CardContent>
-        </Card>
-    </div>
+    <SoftwareDesign />
 </div>
 

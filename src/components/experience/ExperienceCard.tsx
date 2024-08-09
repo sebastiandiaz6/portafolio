@@ -5,8 +5,8 @@ import {
     CardFooter,
     CardHeader,
     CardTitle,
-} from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+} from "@/components/ui/card.tsx"
+import { Badge } from "@/components/ui/badge.tsx"
 
 interface Props {
     title: string

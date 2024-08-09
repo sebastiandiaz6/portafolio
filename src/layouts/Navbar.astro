@@ -6,16 +6,16 @@ import { ModeToggle } from '@/components/ModeToggle';
 
 const navigationMenuData = [
     {
-        title: "About",
-        href: "#about",
-    },
-    {
         title: 'Experience',
-        href: '#experience',
+        href: '/experience',
     },
     {
         title: 'Skills',
-        href: '#skills',
+        href: '/skills',
+    },
+    {
+        title: 'Projects',
+        href: '/projects',
     },
 ]
 ---
@@ -39,7 +39,7 @@ const navigationMenuData = [
 </script>
 
 <nav class="flex flex-row justify-between p-5 align-middle">
-    <div>
+    <div class="hidden lg:block">
         <NavigationMenu data={navigationMenuData} client:load/>
     </div>
     <div class="flex flex-row gap-3">

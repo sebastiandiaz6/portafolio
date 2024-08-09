@@ -1,0 +1,16 @@
+---
+
+import { Image } from 'astro:assets';
+import Slogan from "./Slogan.astro";
+
+---
+
+<div id="about" class="grid grid-cols-1 w-full h-full lg:grid-cols-2">
+    <div class="flex justify-center items-center lg:hidden">
+        <Image src="/logo/Logo.png" alt="Logo." width="250" height="250"/>
+    </div>
+    <Slogan />
+    <div class="hidden lg:flex lg:justify-center lg:items-center">
+        <Image src="/logo/Logo.png" alt="Logo." width="500" height="500"/>
+    </div>
+</div>
