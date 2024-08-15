@@ -1,10 +1,4 @@
-import {
-    Carousel as BaseCarousel,
-    CarouselContent,
-    CarouselItem,
-    CarouselNext,
-    CarouselPrevious,
-} from "@/components/ui/carousel.tsx";
+import Marquee from "@/components/magicui/marquee";
 import {ExperienceCard} from "@/components/experience/ExperienceCard.tsx";
 
 const experienceData = [
@@ -24,22 +18,23 @@ const experienceData = [
     }
 ]
 
-export function ExperienceCarousel() {
+export function MarqueeExperienceCarousel(){
     return (
         <div className="flex flex-col justify-center items-center mt-5 lg:mt-0">
             <h1 className="text-3xl font-bold mb-10">Experience</h1>
-            <BaseCarousel className="w-full max-w-72 sm:max-w-sm">
-                <CarouselContent>
+            <div
+                className="relative flex h-[500px] w-full max-w-72 sm:max-w-sm flex-col items-center justify-center overflow-hidden rounded-lg border bg-background md:shadow-xl">
+                <Marquee pauseOnHover vertical className="[--duration:20s]">
                     {experienceData.map((experience, index) => (
-                        <CarouselItem key={index}>
-                            <ExperienceCard title={experience.title} description={experience.description}
-                                            footer={experience.footer} date={experience.date} url={experience.url}/>
-                        </CarouselItem>
+                        <ExperienceCard title={experience.title} description={experience.description}
+                                        footer={experience.footer} date={experience.date} url={experience.url}/>
                     ))}
-                </CarouselContent>
-                <CarouselPrevious/>
-                <CarouselNext/>
-            </BaseCarousel>
+                </Marquee>
+                <div
+                    className="pointer-events-none absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-white dark:from-background"></div>
+                <div
+                    className="pointer-events-none absolute inset-x-0 bottom-0 h-1/3 bg-gradient-to-t from-white dark:from-background"></div>
+            </div>
         </div>
     )
 }

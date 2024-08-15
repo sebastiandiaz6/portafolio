@@ -1,4 +1,5 @@
 import IconCloud from "@/components/magicui/icon-cloud";
+
 const skills = [
     'javascript',
     'typescript',
