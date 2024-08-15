@@ -21,7 +21,7 @@ const designSkillsData = [
 
 export function DesignSkills() {
     return (
-        <Tabs defaultValue={designSkillsData[0].value} className="max-w-72 lg:max-w-lg">
+        <Tabs defaultValue={designSkillsData[0].value} className="max-w-72 lg:max-w-md">
             <TabsList className="flex flex-row w-full">
                 {designSkillsData.map((item) => (
                     <TabsTrigger value={item.value} className="w-1/2">
