@@ -1,12 +1,10 @@
 ---
 
-import { Image } from 'astro:assets';
 import { DesignSkills } from "./DesignSkills";
 
 ---
 
-<div class="flex flex-col justify-center items-center gap-5 lg:gap-20 lg:flex-row pb-10 lg:pb-0">
-    <Image src="/logo/Skills.png" alt="Skills." width="250" height="250"/>
+<div class="flex flex-col justify-center items-center lg:flex-row pb-10 lg:pb-0">
     <div>
         <DesignSkills client:load/>
     </div>

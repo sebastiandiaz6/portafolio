@@ -13,29 +13,26 @@ interface Props {
     description: string
     footer: string[]
     date: string
-    url: string
 }
 
-export function ExperienceCard({title, description, footer, date, url}: Props) {
+export function ExperienceCard({title, description, footer, date}: Props) {
     return (
-        <a href={url} target='_blank'>
-            <Card>
-                <CardHeader>
-                    <CardTitle>
-                        {title}
-                    </CardTitle>
-                    <CardDescription>
-                        {date}
-                    </CardDescription>
-                </CardHeader>
-                <CardContent>
-                    {description}
-                </CardContent>
-                <CardFooter className="flex flex-wrap">
-                    {footer.map((item) => (<Badge className="mx-1 my-1">{item}</Badge>
-                    ))}
-                </CardFooter>
-            </Card>
-        </a>
+        <Card>
+            <CardHeader>
+                <CardTitle>
+                    {title}
+                </CardTitle>
+                <CardDescription>
+                    {date}
+                </CardDescription>
+            </CardHeader>
+            <CardContent>
+                {description}
+            </CardContent>
+            <CardFooter className="flex flex-wrap">
+                {footer.map((item) => (<Badge className="mx-1 my-1">{item}</Badge>
+                ))}
+            </CardFooter>
+        </Card>
     )
 }
